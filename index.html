@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Jobs - Job Site</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid col-sm-12 text-white">
+            <a class="navbar-brand text-white" href="#">Full Stack</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" onclick="homePage()" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="allJobs">All Jobs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Categories</a>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="saved-jobs-link">Saved Jobs💖</a>
+                    </li>
+                </ul>
+                <form class="d-flex" id="search-form">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        id="searchInput"></input>
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="col-sm-12" id="board_jobs"></div>
+    <h2 id="noSavedJobs">There are no saved jobs</h2>
+    <h2 id="noSearch">No jobs found</h2>
+
+
+    <div id="saved-jobs-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+<!-- You must build and design a job site as you wish:
+
+// The site should have:
+// homepage,
+// All the jobs, brings all the jobs (according to the limit you want)
+// Categories - clicking on any category will bring the jobs from that category.
+// Preferred jobs, clicking on this will lead you to see the preferred jobs that are saved in LocalStorge
+// Search - brings jobs according to the search words in the input field
+
+// All jobs come from remotive's API
+
+// The API documentation is here:
+// https://github.com/remotive-com/remote-jobs-api
+
+// Examples and explanation of readings:
+// The "login" address to the API is:
+// https://remotive.com/api/remote-jobs
+
+// In order to get all the jobs, you need to pass a parameter to the URL of a limit number
+// https://remotive.com/api/remote-jobs?limit=50 An example of a limit of 50 jobs
+
+// To get a list of all their categories, you should go here
+// https://remotive.com/api/remote-jobs/categories
+
+// In order to receive jobs by category, you need to pass a parameter to the URL of the category name from the list
+// https://remotive.com/api/remote-jobs?category=software-dev
+
+
+// In order to get jobs by free search, you need to pass a parameter of search words such as:
+// https://remotive.com/api/remote-jobs?search=java%20script
+
+
+
+// Important points in the project:
+// 1. Clean, readable and organized code
+// 2. It is possible to work with Bootstrap
+// 3. The site will be in SPA architecture -->
